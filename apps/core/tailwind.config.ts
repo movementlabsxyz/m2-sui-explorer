@@ -9,6 +9,7 @@ import { fontFamily } from 'tailwindcss/defaultTheme';
 const MIN_LINE_HEIGHT = '1.13';
 
 export default {
+	darkMode: 'class',
 	content: ['./src/**/*.{js,jsx,ts,tsx}'],
 	theme: {
 		// Overwrite colors to avoid accidental usage of Tailwind colors:
@@ -57,13 +58,13 @@ export default {
 			},
 			hero: {
 				DEFAULT: '#0284AD',
-				dark: '#007195',
-				darkest: '#15527B',
+				dark: '#FCB900',
+				darkest: '#df8b59',
 			},
 			success: {
-				DEFAULT: '#2DD7A7',
-				dark: '#008C65',
-				light: '#D5F7EE',
+				DEFAULT: '#FCB900',
+				dark: '#E48C65',
+				light: '#E4F195',
 			},
 			warning: {
 				DEFAULT: '#F2BD24',
@@ -95,8 +96,8 @@ export default {
 				xl: '32px',
 			},
 			colors: {
-				'gradient-blue-start': '#589AEA',
-				'gradient-blue-end': '#4C75A6',
+				'gradient-blue-start': '#eade58',
+				'gradient-blue-end': '#cbc658',
 				'gradients-graph-cards-start': '#D2EBFA',
 				'gradients-failure-start': '#FBF0FF',
 			},
@@ -224,8 +225,8 @@ export default {
 				placeholderGradient01: 'linear-gradient(165.96deg, #e6f5ff 10%, #ebecff 95%)',
 				placeholderShimmer:
 					'linear-gradient(90deg, #ecf1f4 -24.18%, rgba(237 242 245 / 40%) 73.61%, #f3f7f9 114.81%, #ecf1f4 114.82%)',
-				'gradients-graph-cards': 'linear-gradient(176deg, #D2EBFA 51.68%, #D5F7EE 100%)',
-				'gradients-failure': 'linear-gradient(166deg, #FBF0FF 0%, #FFF0F0 100%)',
+				'gradients-graph-cards': 'linear-gradient(176deg, #fff789 51.68%, #F5F7EE 100%)',
+				'gradients-failure': 'linear-gradient(166deg, #FBF0FF 0%, #f5ffd1  100%)',
 				objectCard: 'linear-gradient(166deg, #F0F9FF 9.97%, #FEF7FF 94.97%)',
 			},
 			rotate: {

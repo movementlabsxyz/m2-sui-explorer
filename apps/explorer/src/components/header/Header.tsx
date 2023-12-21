@@ -1,7 +1,7 @@
 // Copyright (c) Mysten Labs, Inc.
 // SPDX-License-Identifier: Apache-2.0
 
-import { Sui, SuiLogoTxt } from '@mysten/icons';
+import { MoveLogo, Sui, SuiLogoTxt } from '@mysten/icons';
 import clsx from 'clsx';
 import { useEffect, useState } from 'react';
 
@@ -34,8 +34,9 @@ function Header() {
 					to="/"
 					className="flex flex-nowrap items-center gap-1 text-hero-darkest"
 				>
-					<Sui className="h-[26px] w-5" />
-					<SuiLogoTxt className="h-[17px] w-[27px]" />
+					{/* <Sui className="h-[26px] w-5" /> */}
+					{/* <SuiLogoTxt className="h-[17px] w-[27px]" /> */}
+					<MoveLogo className="h-[36px] w-10" />
 				</LinkWithQuery>
 				<div className="flex w-full gap-2">
 					<div className="flex-1">

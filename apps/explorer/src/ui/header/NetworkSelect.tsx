@@ -174,7 +174,7 @@ function NetworkSelectPanel({ networks, onChange, value }: Omit<NetworkSelectPro
 				</SelectableNetwork>
 			))}
 
-			<SelectableNetwork
+			{/* <SelectableNetwork
 				state={
 					isCustomNetwork
 						? NetworkState.SELECTED
@@ -190,7 +190,7 @@ function NetworkSelectPanel({ networks, onChange, value }: Omit<NetworkSelectPro
 						<CustomRPCInput value={isCustomNetwork ? value : ''} onChange={onChange} />
 					</div>
 				)}
-			</SelectableNetwork>
+			</SelectableNetwork> */}
 		</>
 	);
 }
@@ -265,7 +265,7 @@ export function NetworkSelect({
 											close();
 										}}
 									/>
-									{!!value && version && binaryVersion ? (
+									{/* {!!value && version && binaryVersion ? (
 										<div className="-mx-3 -mb-4 mt-2 rounded-b-lg bg-hero-darkest/5">
 											<NetworkVersion
 												label={selected?.label ?? 'Custom RPC'}
@@ -273,7 +273,7 @@ export function NetworkSelect({
 												version={version}
 											/>
 										</div>
-									) : null}
+									) : null} */}
 								</Popover.Panel>
 							)}
 						</AnimatePresence>
