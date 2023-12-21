@@ -145,6 +145,7 @@ export { default as StakeAdd16 } from './StakeAdd16';
 export { default as StakeRemove16 } from './StakeRemove16';
 export { default as Staking32 } from './Staking32';
 export { default as SuiLogoTxt } from './SuiLogoTxt';
+export { default as MoveLogo } from './Move';
 export { default as Sui } from './Sui';
 export { default as SuiCustomRpc } from './SuiCustomRpc';
 export { default as SuiDevnet } from './SuiDevnet';

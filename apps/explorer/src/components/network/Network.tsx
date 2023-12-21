@@ -15,10 +15,10 @@ export default function WrappedNetworkSelect() {
 	const { data: binaryVersion } = useSuiClientQuery('getRpcApiVersion');
 
 	const networks = [
-		{ id: Network.MAINNET, label: 'Mainnet' },
-		{ id: Network.TESTNET, label: 'Testnet' },
-		{ id: Network.DEVNET, label: 'Devnet' },
-		{ id: Network.LOCAL, label: 'Local' },
+		// { id: Network.MAINNET, label: 'Mainnet' },
+		// { id: Network.TESTNET, label: 'Testnet' },
+		{ id: Network.DEVNET, label: 'M2 Devnet' },
+		// { id: Network.LOCAL, label: 'Local' },
 	].filter(Boolean) as NetworkOption[];
 
 	return (

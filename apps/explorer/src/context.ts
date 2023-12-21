@@ -10,8 +10,8 @@ import { Network } from './utils/api/DefaultRpcClient';
 import { growthbook } from './utils/growthbook';
 import { queryClient } from './utils/queryClient';
 
-export const DEFAULT_NETWORK =
-	import.meta.env.VITE_NETWORK || (import.meta.env.DEV ? Network.LOCAL : Network.MAINNET);
+export const DEFAULT_NETWORK = Network.DEVNET
+	// import.meta.env.VITE_NETWORK || (import.meta.env.DEV ? Network.LOCAL : Network.MAINNET);
 
 export const NetworkContext = createContext<
 	[Network | string, (network: Network | string) => void]

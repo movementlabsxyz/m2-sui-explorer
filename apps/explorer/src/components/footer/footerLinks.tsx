@@ -15,21 +15,21 @@ function FooterIcon({ children }: { children: ReactNode }) {
 }
 
 export const footerLinks = [
-	{ title: 'FAQ', href: 'https://docs.mystenlabs.com/explorer/faq' },
-	{ title: 'Blog', href: 'https://medium.com/mysten-labs' },
-	{
-		title: 'Whitepaper',
-		href: 'https://github.com/MystenLabs/sui/blob/main/doc/paper/sui.pdf',
-	},
+	// { title: 'FAQ', href: 'https://docs.mystenlabs.com/explorer/faq' },
+	// { title: 'Blog', href: 'https://medium.com/mysten-labs' },
+	// {
+		// title: 'Whitepaper',
+		// href: 'https://github.com/MystenLabs/sui/blob/main/doc/paper/sui.pdf',
+	// },
 	{
 		title: 'Docs',
-		href: 'https://docs.mystenlabs.com/explorer',
+		href: 'https://docs.movementlabs.xyz',
 	},
 	{
 		title: 'GitHub',
-		href: 'https://github.com/MystenLabs',
+		href: 'https://github.com/movemntdev',
 	},
-	{ title: 'Press', href: 'https://mystenlabs.com/#community' },
+	// { title: 'Press', href: 'https://mystenlabs.com/#community' },
 ];
 
 export const socialLinks = [
@@ -39,7 +39,7 @@ export const socialLinks = [
 				<SocialDiscord24 />
 			</FooterIcon>
 		),
-		href: 'https://discord.gg/BK6WFhud',
+		href: 'https://discord.gg/movementlabsxyz',
 	},
 	{
 		children: (
@@ -47,7 +47,7 @@ export const socialLinks = [
 				<SocialTwitter24 />
 			</FooterIcon>
 		),
-		href: 'https://twitter.com/Mysten_Labs',
+		href: 'https://twitter.com/movementlabsxyz',
 	},
 	{
 		children: (
