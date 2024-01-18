@@ -48,6 +48,7 @@ export function PlayPause({ paused, onChange, animate }: PlayPauseProps) {
 		<button
 			type="button"
 			aria-label={paused ? 'Paused' : 'Playing'}
+			name={paused ? 'Paused' : 'Playing'}
 			onClick={onChange}
 			className="relative cursor-pointer border-none bg-transparent text-steel hover:text-steel-darker"
 		>

@@ -66,13 +66,13 @@ export function Activity({ initialTab, initialLimit, disablePagination }: Props)
 			<Tabs size="lg" value={activeTab} onValueChange={setActiveTab}>
 				<div className="relative">
 					<TabsList>
-						<TabsTrigger value="transactions">
+						<TabsTrigger name="transactions" value="transactions">
 							<Heading variant="heading4/semibold">Transaction Blocks</Heading>
 						</TabsTrigger>
-						<TabsTrigger value="epochs">
+						<TabsTrigger name="epochs" value="epochs">
 							<Heading variant="heading4/semibold">Epochs</Heading>
 						</TabsTrigger>
-						<TabsTrigger value="checkpoints">
+						<TabsTrigger name="checkpoints" value="checkpoints">
 							<Heading variant="heading4/semibold">Checkpoints</Heading>
 						</TabsTrigger>
 					</TabsList>
