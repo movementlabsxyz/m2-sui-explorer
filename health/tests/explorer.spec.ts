@@ -1,8 +1,7 @@
 import { test, expect } from '@playwright/test';
 
-// const root = "https://explorer-mvmt-m2.web.app/?network=devnet"
-const root = "http://127.0.0.1:3000/"
-const pageTitle = "M2 Sui Explorer"
+const root = "https://explorer-mvmt-m2.web.app/"
+const pageTitle = "Movement Labs"
 
 function health_log({
   health_check,
@@ -22,55 +21,55 @@ function health_log({
 
 }
 
-// test('exists', async ({ page }) => {
-//   const successful = await page.goto(root);
-//   health_log({
-//     health_check: "exists",
-//     status: successful ? "PASS" : "FAIL",
-//     reason: "page exists"
-//   })
-//   await expect(page).toHaveTitle(/M2 Sui Explorer/);
-// });
+test('exists', async ({ page }) => {
+  const successful = await page.goto(root);
+  health_log({
+    health_check: "exists",
+    status: successful ? "PASS" : "FAIL",
+    reason: "page exists"
+  })
+  await expect(page).toHaveTitle(/M2 Sui Explorer/);
+});
 
-// test('has title', async ({ page }) => {
-//   await page.goto(root);
+test('has title', async ({ page }) => {
+  await page.goto(root);
 
-//   const title = await page.title();
-//   health_log({
-//     health_check: "has-title",
-//     status: title === pageTitle ? "PASS" : "FAIL",
-//     reason: "title is present"
-//   })
+  const title = await page.title();
+  health_log({
+    health_check: "has-title",
+    status: title === pageTitle ? "PASS" : "FAIL",
+    reason: "title is present"
+  })
 
-//   // Expect a title "to contain" a substring.
-//   await expect(page).toHaveTitle(/M2 Sui Explorer/);
+  // Expect a title "to contain" a substring.
+  await expect(page).toHaveTitle(/M2 Sui Explorer/);
 
-// });
+});
 
-// test('pauses', async ({ page }) => {
-//   await page.goto(root);
+test('pauses', async ({ page }) => {
+  await page.goto(root);
 
-//   // Click the get started link.
-//   await page.getByRole('button', {name: "Playing"}).click();
-//   const res = await page.waitForSelector('text=Auto-refresh paused', {
-//     timeout : 1000
-//   });
+  // Click the get started link.
+  await page.getByRole('button', {name: "Playing"}).click();
+  const res = await page.waitForSelector('text=Auto-refresh paused', {
+    timeout : 5000
+  });
 
-//   await page.getByRole('button', {name: "Paused"}).click();
-//   const res2 = await page.waitForSelector('text=Auto-refreshing on - every 10 seconds', {
-//     timeout : 1000
-//   });
+  await page.getByRole('button', {name: "Paused"}).click();
+  const res2 = await page.waitForSelector('text=Auto-refreshing on - every 10 seconds', {
+    timeout : 5000
+  });
 
-//   health_log({
-//     health_check: "pauses-auto-refresh",
-//     status: res && res2 ? "PASS" : "FAIL",
-//     reason: "get started link is present"
-//   })
+  health_log({
+    health_check: "pauses-auto-refresh",
+    status: res && res2 ? "PASS" : "FAIL",
+    reason: "get started link is present"
+  })
 
-//   // Expects page to have a heading with the name of Installation.
-//   await expect(res).toBeDefined();
+  // Expects page to have a heading with the name of Installation.
+  await expect(res).toBeDefined();
 
-// });
+});
 
 test('opens checkpoint', async ({ page }) => {
   await page.goto(root);
@@ -78,7 +77,7 @@ test('opens checkpoint', async ({ page }) => {
   // Click the get checkpoints link.
   await page.getByRole('tab', {name: "checkpoints"}).click();
   const res = await page.waitForSelector('text=TRANSACTION BLOCK COUNT', {
-    timeout : 1000
+    timeout : 5000
   });
 
   health_log({
@@ -99,7 +98,7 @@ test('opens epoch', async ({ page }) => {
   const epoch = await page.$('div[style*="grid-area: epoch;"]');
   await epoch?.click();
   const res = await page.waitForSelector('text=There was an issue retrieving data for epoch', {
-    timeout : 1000
+    timeout : 5000
   });
 
   health_log({
