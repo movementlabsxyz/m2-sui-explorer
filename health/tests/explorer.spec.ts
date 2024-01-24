@@ -6,7 +6,7 @@ const pageTitle = "Movement Labs"
 function health_log({
   health_check,
   status,
-  group = "movement-faucet",
+  group = "m2-sui-explorer",
   reason
 } : {
   health_check : string,
